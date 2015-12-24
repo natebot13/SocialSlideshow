@@ -19,7 +19,7 @@ function getImageList() {
 }
 
 function chooseNextImage () {
-    $('.nextImage').src = images[Math.floor(Math.random() * images.length)];
+    $('.nextImage').attr('src', images[Math.floor(Math.random() * images.length)]);
     setTimeout(function() {
         var next = $('.nextImage');
         var current = $('.currentImage');
