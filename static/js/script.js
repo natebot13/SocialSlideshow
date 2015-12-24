@@ -2,6 +2,14 @@ var requestInterval = 10000;
 var loadWaitInterval = 3000;
 var removeAnimationInterval = 2000;
 var url = "images.txt";
+var animations = ["bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp",
+                  "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig", "fadeInUp", "fadeInUpBig",
+                  "flipInX", "flipInY"
+                  "lightSpeedIn",
+                  "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight",
+                  "slideInUp", "slideInDown", "slideInLeft", "slideInRight",
+                  "zoomIn", "zoomInDown", "zoomInLeft", "zoomInRight", "zoomInUp",
+                  "rollIn"]
 
 var images = [];
 var xmlhttp = new XMLHttpRequest();
@@ -20,6 +28,7 @@ function getImageList() {
 }
 
 function chooseNextImage () {
+    var animation = animations[Math.floor(Math.random() * animations.length)];
     $('.nextImage').attr('src', images[Math.floor(Math.random() * images.length)]);
     setTimeout(function() {
         var next = $('.nextImage');
@@ -27,10 +36,10 @@ function chooseNextImage () {
         $(next).removeClass('nextImage');
         $(next).addClass('currentImage');
         $(next).addClass('animated');
-        $(next).addClass('slideInUp');
+        $(next).addClass(animation);
         setTimeout(function() {
             $(next).removeClass('animated');
-            $(next).removeClass('slideInUp');
+            $(next).removeClass(animation);
         }, removeAnimationInterval);
         
         $(current).removeClass('currentImage');
