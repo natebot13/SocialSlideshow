@@ -31,7 +31,7 @@ function chooseNextImage () {
         setTimeout(function() {
             $(next).removeClass('animated');
             $(next).removeClass('slideInUp');
-        });
+        }, removeAnimationInterval);
         
         $(current).removeClass('currentImage');
         $(current).addClass('nextImage');
