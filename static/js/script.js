@@ -35,7 +35,7 @@ function chooseNextImage () {
 
 $('.currentImage').bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
     $('.currentImage').removeClass('animated');
-    $('.currentImage').removeClass('slideIn');
+    $('.currentImage').removeClass('slideInUp');
 });
 
 var requester = setInterval(getImageList, requestInterval);
