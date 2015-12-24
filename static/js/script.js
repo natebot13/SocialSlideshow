@@ -38,4 +38,9 @@ $('.currentImage').bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanim
     $('.currentImage').removeClass('slideInUp');
 });
 
+$('.nextImage').bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+    $('.nextImage').removeClass('animated');
+    $('.nextImage').removeClass('slideInUp');
+});
+
 var requester = setInterval(getImageList, requestInterval);
