@@ -1,18 +1,19 @@
 html, body {
   margin: 0px;
+  height: 100%;
+  overflow: hidden;
 }
 
 img {
   height: 100%;
   position: absolute;
+  top: 0px;
 }
 
 .nextImage {
   z-index: 0;
-  bottom: 0px;
 }
 
 .currentImage {
   z-index: 1;
-  top: 0px;
 }
