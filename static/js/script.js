@@ -21,15 +21,15 @@ function getImageList() {
 function chooseNextImage () {
     $('.nextImage').src = images[Math.floor(Math.random() * images.length)];
     setTimeout(function() {
-        var element = $('.nextImage');
-        $(element).removeClass('.nextImage');
-        $(element).addClass('.currentImage');
+        var element = $('nextImage');
+        $(element).removeClass('nextImage');
+        $(element).addClass('currentImage');
         $(element).addClass('animated');
-        $(element).addClass('slideIn');
+        $(element).addClass('slideInUp');
         
         element = $('.currentImage');
-        $(element).removeClass('.currentImage');
-        $(element).addClass('.nextImage');
+        $(element).removeClass('currentImage');
+        $(element).addClass('nextImage');
     }, loadWaitInterval);
 }
 
