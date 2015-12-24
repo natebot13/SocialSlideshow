@@ -4,7 +4,7 @@ var removeAnimationInterval = 2000;
 var url = "images.txt";
 var animations = ["bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp",
                   "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig", "fadeInUp", "fadeInUpBig",
-                  "flipInX", "flipInY"
+                  "flipInX", "flipInY",
                   "lightSpeedIn",
                   "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight",
                   "slideInUp", "slideInDown", "slideInLeft", "slideInRight",
