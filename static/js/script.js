@@ -1,7 +1,7 @@
 var requestInterval = 10000
 var loadWaitInterval = 3000
+var url = "images.txt";
 
-var url = "slides.nathanp.me";
 var images = [];
 var xmlhttp = new XMLHttpRequest();
 

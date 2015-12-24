@@ -1,0 +1,1 @@
+["static/images/test.jpg", "static/images/test2.jpg"]
