@@ -1,5 +1,6 @@
-var requestInterval = 10000
-var loadWaitInterval = 3000
+var requestInterval = 10000;
+var loadWaitInterval = 3000;
+var removeAnimationInterval = 2000;
 var url = "images.txt";
 
 var images = [];
@@ -27,20 +28,14 @@ function chooseNextImage () {
         $(next).addClass('currentImage');
         $(next).addClass('animated');
         $(next).addClass('slideInUp');
+        setTimeout(function() {
+            $(next).removeClass('animated');
+            $(next).removeClass('slideInUp');
+        });
         
         $(current).removeClass('currentImage');
         $(current).addClass('nextImage');
     }, loadWaitInterval);
 }
-
-$('.currentImage').bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-    $('.currentImage').removeClass('animated');
-    $('.currentImage').removeClass('slideInUp');
-});
-
-$('.nextImage').bind('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-    $('.currentImage').removeClass('animated');
-    $('.currentImage').removeClass('slideInUp');
-});
 
 var requester = setInterval(getImageList, requestInterval);
