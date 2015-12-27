@@ -29,12 +29,13 @@ function getImageList() {
 
 function chooseNextImage () {
     var animation = animations[Math.floor(Math.random() * animations.length)];
-    $('.nextImage').attr('src', images[Math.floor(Math.random() * images.length)]);
+    $('.nextImage').children().attr('src', images[Math.floor(Math.random() * images.length)]);
     setTimeout(function() {
         var next = $('.nextImage');
         var current = $('.currentImage');
         $(next).removeClass('nextImage');
         $(next).addClass('currentImage');
+        next = next.children();
         $(next).addClass('animated');
         $(next).addClass(animation);
         setTimeout(function() {
