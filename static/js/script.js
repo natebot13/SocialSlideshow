@@ -49,3 +49,13 @@ function chooseNextImage () {
 }
 
 var requester = setInterval(getImageList, requestInterval);
+
+var hue = Math.floor(Math.random() * 360);
+var colorbackground = setInterval(function() {
+    var backgroundobj = {backgroundColor: 'hsl(' + hue + ', 100%, 50%)'};
+    $('body').css(backgroundobj);
+    hue += 1;
+    if (hue >= 360) {
+        hue = 0;
+    }
+}, 200);
