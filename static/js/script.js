@@ -1,7 +1,7 @@
 var requestInterval = 10000;
 var loadWaitInterval = 3000;
 var removeAnimationInterval = 2000;
-var url = "images.txt";
+var url = "http://newyears.nathanp.me/slideshow/getimages";
 var animations = ["bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp",
                   "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig", "fadeInUp", "fadeInUpBig",
                   "flipInX", "flipInY",
@@ -42,7 +42,7 @@ function chooseNextImage () {
             $(next).removeClass('animated');
             $(next).removeClass(animation);
         }, removeAnimationInterval);
-        
+
         $(current).removeClass('currentImage');
         $(current).addClass('nextImage');
     }, loadWaitInterval);
